@@ -4,18 +4,17 @@ import fs from 'fs';
 const __dirname = import.meta.dirname;
 
 
-
-
 async function saveLog() {
   try {
 
     const folder = path.join(__dirname, 'logs');
     const filename = "system.log";
-    if (fs.existsSync(path.join(folder, filename))) {
+    const filepath = path.join(folder, filename)
+    if (fs.existsSync(filepath)) {
       console.log("Log já existe!");
     } else {
-      await fs.mkdir(folder, { recursive: true });
-      await fs.writeFile(folder, formatLog("Log criado!"), "utf8");
+      fs.mkdir(folder, { recursive: true }, () => { console.log('Pasta logs criada') });
+      fs.writeFile(filepath, formatLog("Log criado!"), "utf8", () => { console.log("Teste") });
     }
   } catch (error) {
     console.error('Erro na operação:', error);

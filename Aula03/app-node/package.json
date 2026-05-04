@@ -1,13 +1,13 @@
 {
-  "name": "@aula_02/aula_02",
+  "name": "@aula_03/app-node",
   "version": "1.0.0",
   "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": []
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
 }
